@@ -37,9 +37,8 @@ Edoardo Morandi e il resto del [meetup](https://t.me/torinorust) di Torino per l
 # Intro
 
 ## Rust in poche parole
-> A language empowering everyone to build reliable and efficient software.
-> Un linguaggio che rende chiunque in grado di creare software efficiente ed affidabile
-> [rust-lang.org](https://rust-lang.org)
+> Un linguaggio che permette a chiunque di sviluppare software affidabile ed efficiente.
+> [rust-lang.org](https://www.rust-lang.org/it/)
 
 ### Punti chiave
 - E\` un linguaggio per **tutti**.
@@ -54,29 +53,29 @@ Solitamente ci si focalizza sull'affidabilita\` (`"Sicuro"`) e sull'efficienza (
 ## Rust in altre parole (e con meno marketing)
 
 - E\` un linguaggio di programmazione di sistema che offre garanzie forti sul comportamento del codice scritto
-  - Il compilatore evita una serie di tipi di errori molto comuni.
-  - Il compilatore e\` in grado di ottimizzare meglio il codice prodotto come effetto collaterale dell'avere maggiori informazioni.
-  - Scrivere codice molto complicato (and esempio multi-thread) diventa di conseguenza piu\` semplice.
-- E\` un linguaggio in cui ergonomia e documentazione non sono questioni secondarie.
+  - Il compilatore evita una serie di tipi di errori **molto** comuni.
+  - Il compilatore e\` in grado di ottimizzare meglio il codice prodotto come **effetto collaterale** dell'avere maggiori informazioni.
+  - Scrivere codice molto **complicato** (and esempio **multi-thread** o asincrono) diventa di conseguenza piu\` **semplice**.
+- E\` un linguaggio in cui **ergonomia** e documentazione non sono questioni secondarie.
 - E\` un linguaggio che **costringe** ad essere consci di quello che si fa.
-  - Il compilatore ti tiene per mano e spesso ti guida.
+  - Il compilatore ti tiene **per mano** e spesso ti guida.
 
 ---
 # Intro
 
-- Il linguaggio riesce ad offrire sicurezza senza impattare sulla velocita\` di esecuzione, dato che sia una sia l'altra si basano sull'assuto che il programmatore riesca a dare **piu\`** informazioni al compilatore rispetto ad altri linguaggi.
-  - Il compilatore grazie a cio\` riuscira\` sia ad applicare piu\` ottimizzazioni ed al contempo riconoscere errori e comportamenti pericolosi che in altri linguaggi possono essere individuati con maggiore difficolta\` e solo con ulteriori strumenti.
+- Il linguaggio riesce ad offrire sicurezza **senza** impattare sulla velocita\` di esecuzione, dato che sia una sia l'altra si basano sull'assuto che il programmatore riesca a dare **piu\`** informazioni al compilatore rispetto ad altri linguaggi.
+  - Il compilatore grazie a cio\` riuscira\` sia ad applicare piu\` ottimizzazioni ed al contempo riconoscere **errori** e comportamenti **pericolosi** che in altri linguaggi possono essere individuati con maggiore difficolta\` e solo con ulteriori strumenti.
 - Ma questo richiede che le informazioni siano fornite.
-  - Il concetto di [lifetime](https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html?highlight=lifetime#lifetime-annotation-syntax) e\` piuttosto originale, cosi\` come il ragionare con [riferimenti e possesso](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html) in un modo abbastanza diverso rispetto a quello che succede con i linguaggi con un garbage collector puo\` essere frustrante all'inizio.
+  - Il concetto di [lifetime](https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html?highlight=lifetime#lifetime-annotation-syntax) e\` piuttosto originale, cosi\` come il ragionare con [riferimenti e possesso](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html) in un modo abbastanza diverso rispetto a quello che succede con i linguaggi con un garbage collector puo\` essere **frustrante** all'inizio.
 ---
 # Intro
 
-- Sino a qui sembra che di `facile`, per chi ha gia\` esperienza con altri linguaggi ci sia relativamente poco.
+- Sino a qui sembra che di `facile`, per chi ha gia\` esperienza con altri linguaggi ci sia relativamente **poco**.
 
-- Chi partisse con Rust come primo linguaggio probabilmente avrebbe da disimparare molto meno ed avrebbe solo i vantaggi sopra enunciati.
+- Chi partisse con Rust come **primo** linguaggio probabilmente avrebbe da **disimparare** molto meno ed avrebbe solo i vantaggi sopra enunciati.
 
-- Puo\` bastare una buona documentazione ed una attenzione quasi-maniacale per i dettagli?
-  - E se non bastasse l'affidabilita\` e l'efficienza dichiarate bastano a farci considerare questo linguaggio un po' alieno per il nostro prossimo progetto?
+- Una **buona** documentazione ed una attenzione **quasi-maniacale** per i dettagli sono sufficienti a passare a questo linguaggio in maniera indolore?
+  - E se non bastassero, **l'affidabilita** e **l'efficienza** dichiarate sarebbero sufficienti a farci considerare questo linguaggio un po' alieno per il nostro **prossimo** progetto?
 
 ---
 # Affidabilita\`
@@ -85,7 +84,7 @@ Solitamente ci si focalizza sull'affidabilita\` (`"Sicuro"`) e sull'efficienza (
 > "As we’ve seen, roughly 70% of the security issues that the MSRC assigns a CVE to are memory safety issues. This means that if that software had been written in Rust, 70% of these security issues would most likely have been eliminated."
 > [Microsoft](https://msrc-blog.microsoft.com/2019/07/22/why-rust-for-safe-systems-programming/)
 
-Rust rende impossibili gli errori che han morso Microsoft per oltre i 2/3 delle volte:
+Rust rende **impossibili** gli errori che han morso Microsoft per oltre i 2/3 delle volte:
 - NULL-pointer dereference
 - Out of bound read/write
 - Use after free
@@ -99,7 +98,7 @@ Rust rende impossibili gli errori che han morso Microsoft per oltre i 2/3 delle 
 >
 > [Linux Security Summit - Writing Linux Kernel Modules in Safe Rust - Geoffrey Thomas, Two Sigma Investments & Alex Gaynor, Alloy](https://www.youtube.com/watch?v=RyY01fRyGhM&feature=youtu.be)
 
-**NOTA BENE**: Rust **non** risolve magicamente ogni problema, gli errori di concetto **capitano**, e vengono corretti prima se non hai da spendere giornate ad usare [asan](https://github.com/google/sanitizers/wiki/AddressSanitizer) e/o [valgrind](http://valgrind.org/info/tools.html) a causa di un buffer overflow sfuggente.
+**NOTA BENE**: Rust **non** risolve magicamente ogni problema, gli errori di concetto **capitano**, e vengono **corretti prima** se non hai da spendere giornate ad usare [asan](https://github.com/google/sanitizers/wiki/AddressSanitizer) e/o [valgrind](http://valgrind.org/info/tools.html) a causa di un buffer overflow sfuggente.
 
 ---
 # Affidabilita\` porta a Velocita\`
@@ -108,7 +107,7 @@ Rust rende impossibili gli errori che han morso Microsoft per oltre i 2/3 delle 
 > "The style component is the part of a browser that applies CSS rules to a page. This is a top-down process on the DOM tree: given the parent style, the styles of children can be calculated independently: a perfect use-case for parallel computation. By 2017, Mozilla had made two previous attempts to parallelize the style system using C++. Both had failed"
 > [Mozilla](https://hacks.mozilla.org/2019/02/rewriting-a-browser-component-in-rust/)
 
-Ecco un esempio perfetto di codice sicuro e ben piu\` veloce: la programmazione multi-thread e\` complicata e mischiare i possibili errori logici (che possono portare a deadlock quasi-casuali) con errori evitabili (le famose `data race`) rende molto piu\` difficoltoso arrivare a qualcosa che funzioni bene. Con Rust hai da badare solo alla logica.
+Ecco un esempio perfetto di codice sicuro e ben piu\` veloce: la programmazione multi-thread e\` complicata e **mischiare** i possibili errori logici (che possono portare a deadlock quasi-casuali) con errori evitabili (le famose `data race`) rende molto piu\` **difficoltoso** arrivare a qualcosa che funzioni bene. Con Rust hai da badare **solo alla logica**.
 
 ---
 # Velocita\`
@@ -119,8 +118,7 @@ Ecco un esempio perfetto di codice sicuro e ben piu\` veloce: la programmazione 
 >
 > [about ripgrep](https://blog.burntsushi.net/ripgrep/)
 
-Si puo\` fare qualcosa di meglio che usi sia i `thread` sia tutte le feature delle cpu correnti:
-- Istruzioni specifiche, ad esempio [rotate](https://doc.rust-lang.org/std/primitive.u32.html#method.rotate_left), [count ones](https://doc.rust-lang.org/std/primitive.u32.html#method.count_ones), [leading zeros](https://doc.rust-lang.org/std/primitive.u32.html#method.leading_zeros), sono disponibili ed il supporto a [SIMD](https://github.com/rust-lang/stdarch/) permette di non rinventare [la ruota](https://doc.rust-lang.org/std/index.html?search=detected).
+- Istruzioni specifiche quali [rotate](https://doc.rust-lang.org/std/primitive.u32.html#method.rotate_left), [count ones](https://doc.rust-lang.org/std/primitive.u32.html#method.count_ones), [leading zeros](https://doc.rust-lang.org/std/primitive.u32.html#method.leading_zeros), sono direttamente parte del linguaggio e non bisogna rinventare [la ruota](https://doc.rust-lang.org/std/index.html?search=detected) per supportare [SIMD](https://github.com/rust-lang/stdarch/).
 - [rayon](https://crates.io/crates/rayon) rende quasi istantaneo passare da un loop normale ad una esecuzione su un pool di thread.
 ---
 # Velocita\` e Facilita\` (di integrazione)
@@ -131,13 +129,20 @@ Si puo\` fare qualcosa di meglio che usi sia i `thread` sia tutte le feature del
 > [about avro-rs used from python](http://poros.github.io/how-to-write-rust-instead-of-c-and-get-away-with-it/)
 
 ---
-# Intro - Facilita\` (di integrazione)
+# Facilita\` (di integrazione)
 
 Rust e\` in grado di creare librerie che appaiono a tutti gli effetti come qualsiasi libreria scritta in C. E vi sono una serie di strumenti ed estensioni del build system di default, [cargo](https://doc.rust-lang.org/cargo/), per rendere l'esperienza piacevole, o quasi:
 - [cargo-c](https://crates.io/crates/cargo-c): per generare librerie + header C e file pkg-config in un solo colpo.
 - [maturin](https://crates.io/crates/maturin): per creare pacchetti python e pubblicarli pure su [pypi](https://pypi.org/).
 - [wasm-pack](https://rustwasm.github.io/wasm-pack/book/): per creare pacchetti wasm+js e pubblicarli su [npm](https://www.npmjs.com/).
 - [j4rs](https://crates.io/crates/j4rs) e [jni-bindgen](https://crates.io/crates/jni-bindgen): per integrare rust e java assieme.
+
+---
+# Facilita\` (di messa in opera)
+
+Rust puo\` e viene usato per scrivere librerie ad alte performance (ad esempio da [cloudflare](https://github.com/cloudflare/quiche), ma essendo un linguaggio di programmazione di sistema e\` possibile usarlo anche in ambienti [embedded](https://github.com/rust-embedded/wg), con sia un [intero sistema operativo](https://www.tockos.org/) o [componenti](https://github.com/ctron/rust-esp-template) per fare [bare metal](https://crates.io/crates/embedded-hal).
+
+Strumenti come [noise explorer](https://noiseexplorer.com/) permettono di generare codice Rust da modelli di verifica formale, facilitando il passaggio da protocolli formalmente **corretti** a implementazioni formalmente sicure e **performanti**.
 
 ---
 # Facilita\`
@@ -366,9 +371,10 @@ $ cargo install bolero-cargo # per chi vuole fare property testing senza faticar
 ---
 # Conclusione
 
-- Nel 2017 ho raccontato Rust, spiegando perche\` **non** lo si dovesse usare per riscrivere il mondo.
-- Nel 2018 ho spiegato come mai sia stato scelto per scrivere [rav1e](https://github.com/xiph/rav1e/).
-- Oggi vi ho raccontato perche\` ora ci sono poche ragioni per non usarlo.
+Sono ben 3 anni che parlo di Rust al LinuxDay:
+- Nel **2017** ho raccontato Rust, spiegando perche\` **non** lo si dovesse usare per riscrivere il mondo.
+- Nel **2018** ho illustrato come mai Rust sia stato scelto per scrivere [rav1e](https://github.com/xiph/rav1e/).
+- **Oggi** vi ho raccontato perche\` ora ci sono poche ragioni per non usarlo.
 
 ---
 # Domande?
